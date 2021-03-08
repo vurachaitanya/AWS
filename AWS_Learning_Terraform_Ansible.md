@@ -20,3 +20,4 @@
 20.	Tags: user:admin, awsiam:admin
 21.	Created ADMIN IAM Access and given console and cli access and got the token/secrets and configured using `aws configure –profile <User Name>`
 22.	` aws iam list-groups --profile chaitu` command to check the group to which your user is been added to.
+23.	![AWS Resource Arch](https://github.com/vurachaitanya/AWS-CLI/blob/master/images/AWS%2BTerraform%2BAnsible.jpg)
