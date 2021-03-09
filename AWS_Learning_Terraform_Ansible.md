@@ -89,4 +89,5 @@ variable "region-worker" {
     default = "us-west-2"
 }
 ```
+- [Yaml file for creating VPC, Internet gateway, subnet](https://raw.githubusercontent.com/linuxacademy/content-deploying-to-aws-ansible-terraform/master/course_lesson_resources/Lesson_NetworkSetup_Part1/networks.tf)
 - 
