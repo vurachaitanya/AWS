@@ -39,3 +39,54 @@ terraform {
 }
 
 ```
+#### Create TF Providers and variables :
+-	Multiple providers in Tf Masters & Workers
+-	Terraform variables with different regions 
+-	Terraform providers files are stored in `/aws/tf/.terraform/providers/registry.terraform.io/hashicorp/aws/3.31.0/linux_amd64`
+-	`./terraform/terraform.tfstate` will have the terraform state file.
+
+- **Providers**
+```
+## cat providers.tf
+provider "aws" {
+    profile = var.profile
+    region = var.region-master
+    alias = "region-master"
+}
+
+provider "aws" {
+    profile = var.profile
+    region = var.region-worker
+    alias = "region-worker"
+}
+```
+- **Variables**
+```
+cat providers.tf
+provider "aws" {
+    profile = var.profile
+    region = var.region-master
+    alias = "region-master"
+}
+
+provider "aws" {
+    profile = var.profile
+    region = var.region-worker
+    alias = "region-worker"
+}
+root@chaitu:~/aws/tf# cat variable.tf
+variable "profiles" {
+    type = string
+    default = "default"
+}
+
+variable "region-master" {
+    type = string
+    default = "us-east-1"
+}
+variable "region-worker" {
+    type = string
+    default = "us-west-2"
+}
+```
+- 
