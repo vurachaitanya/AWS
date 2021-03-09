@@ -52,4 +52,15 @@ Choise of CIDR Block (/16,/24)| Has fixed sizes of /56 CIDR Block
 Choise of CIDR Block| AWS assigns private CIDR, can't select
 public and private different| No difference to public vs private, need to have routes & security Policies to make difference
 
+## Subnets :
+-	Separates a specified CIDR range within an AZ
+-	A segment of a VPC that lives entirely within a single AZ.
+-	Subnet can’t span more than one AZ
+-	Subnet can be public, private or VPN only
 
+#### Private Addressing spaces
+Start IP|End IP|Offers|Range
+---|---|---|---|
+192.168.0.0|192.168.255.255|1|16
+172.16.0.0|172.31.255.255|16|16
+10.0.0.0|10.255.255.255|256|16
