@@ -53,10 +53,17 @@ Choise of CIDR Block| AWS assigns private CIDR, can't select
 public and private different| No difference to public vs private, need to have routes & security Policies to make difference
 
 ## Subnets :
+![VPC to VPC communication](https://github.com/vurachaitanya/AWS/blob/master/images/AWS_Subnets.JPG)
 -	Separates a specified CIDR range within an AZ
 -	A segment of a VPC that lives entirely within a single AZ.
 -	Subnet can’t span more than one AZ
 -	Subnet can be public, private or VPN only
+-	Make sure you don’t have overlapping ip address range. As AWS will allow to do it.
+-	Once VPC is created we can’t change CIDR so make sure those IP’s can’t overlapped across VPC’s.
+-	Make sure no overlap across vpc and on-premise networks. 
+-	Avoid using the default VPC if your VPC will communicate with other VPC’s.
+-	**Default VPC :**  172.31.0.0/16
+-	While creating Subnets 1. Specify Target AZ, 2. Determine CIDR Range (Small: /28, to /16) 3. AWS Reserved first 4 IP’s addresses & Last IP add of the subnet for internal networking purposes. 
 
 #### Private Addressing spaces
 Start IP|End IP|Offers|Range
