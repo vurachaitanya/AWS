@@ -71,3 +71,30 @@ Start IP|End IP|Offers|Range
 192.168.0.0|192.168.255.255|1|16
 172.16.0.0|172.31.255.255|16|16
 10.0.0.0|10.255.255.255|256|16
+
+## VPC Router
+- AZ vs Subnet vs Routers vs Routing table
+![Routers vs Subnet vs AZ vs Routing table](https://github.com/vurachaitanya/AWS/blob/master/images/AWS_Routers.JPG)
+-	VPC Router is not created explicitly. With out VPC router VPC can’t route the traffic. 
+-	First place packets hit when leaving resources that are in the VPC/Subnet.
+-	Routing decisions are governed by route tables associated with VPC.
+-	VPC router will not be shows in AWS Console.
+-	For each subnet automatically VPC Router is created
+-	For communicating two different AZ’s, VPC Router communicates with respective AZ VPC Routers.
+-	VPC Router will act as DHCP and provide the ip addresses which includes DNS & Default gateway.
+-	Default gateway would be VPC router. 
+-	By Default DNS would be served, but can be changed if in case we are working on complex env and to have dedicated DNS.
+-	When VPC is created, it creates route table. 
+-	VPC Routers are Highly available devices and it occupies the .1 addressing space on every subnet associated with VPC.
+-	By default, it allows communications between subnets in the same VPC. This is  what the static “local” route table entry defines.
+-	You can influence the routing for your VPC by editing the main route tables or creating custom route tables for each of the subnets.
+
+
+#### AWS Reserves IP Address:
+-	CIDR Range of 10.0.64.0/21 following 5 Ips are reserved
+-	10.0.64.0: Network Address
+-	10.0.64.1: Reserved by AWS for the VPC Router
+-	10.0.64.2: The IP address for the DNS servers.
+-	10.0.64.3: reserved by AWS for future use.
+-	10.0.71.255: Network broadcast address.
+-	By default AWS VPC will not allow broadcast addresses. 
