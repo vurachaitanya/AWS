@@ -23,7 +23,7 @@
 23.	![AWS Resource Arch](https://github.com/vurachaitanya/AWS-CLI/blob/master/images/AWS%2BTerraform%2BAnsible.jpg)
 
 #### AWS S3 Bucket creation :
--	` aws s3api create-bucket --bucket terraformstatebucketbkp543 --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 --profile chaitu ` create s3 bucket to store terraform states to S3 bucket. 
+-	` aws s3api create-bucket --bucket terraformstatebucketbkp5431 --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 --profile chaitu ` create s3 bucket to store terraform states to S3 bucket. 
 -	`http://terraformstatebucketbkp5431.s3.amazonaws.com/`  bucket is been created for above command
 - Tf file creation for storing the tf states to S3 bucket.
 ```
