@@ -21,3 +21,21 @@
 21.	Created ADMIN IAM Access and given console and cli access and got the token/secrets and configured using `aws configure –profile <User Name>`
 22.	` aws iam list-groups --profile chaitu` command to check the group to which your user is been added to.
 23.	![AWS Resource Arch](https://github.com/vurachaitanya/AWS-CLI/blob/master/images/AWS%2BTerraform%2BAnsible.jpg)
+
+#### AWS S3 Bucket creation :
+-	` aws s3api create-bucket --bucket terraformstatebucketbkp543 --region us-west-2 --create-bucket-configuration LocationConstraint=us-west-2 --profile chaitu ` create s3 bucket to store terraform states to S3 bucket. 
+-	`http://terraformstatebucketbkp5431.s3.amazonaws.com/`  bucket is been created for above command
+- Tf file creation for storing the tf states to S3 bucket.
+```
+root@chaitu:~# cat backend.tf
+terraform {
+  required_version = ">=0.12.0"
+  backend "s3" {
+    region  = "us-west-2"
+    profile = "chaitu"
+    key     = "terraformstatefile"
+    bucket  = "terraformstatebucketbkp5431"
+  }
+}
+
+```
