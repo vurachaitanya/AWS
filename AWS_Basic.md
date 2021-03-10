@@ -142,4 +142,13 @@ your request from AWS IPV4 address pool| assigned upon EC2 Creation
 assign EIP to an EC2 instance(Using ENI)| Can't disassociate add from EC2 instance after launch
 you choose when to release back to AWS| automatically released when you stop or terminate the EC2 instance
 
-
+#### Dual home EC2 instance:
+![IGW vs VPG vs ENI for EC2](https://github.com/vurachaitanya/AWS/blob/master/images/IGW%20vs%20VPG%20vs%20ENI.JPG)
+-	VPC with 2 subnets within AZ.
+-	We can create EC2 with ENI’s in 2 different subnets. 
+-	ENI’s two different secure groups can be assigned for EC2.
+-	Greater flexibility with Security groups 
+-	Separate user access through separate ENI’s.
+-	IGW can be attached to ENI 0 to get communicated from outside the world. 
+-	ENI1 can be connected to Virtual private Gateway (VGW) using different port.
+-	Using ENI’s will isolation of traffic of public vs private (Corporate)
