@@ -155,3 +155,34 @@ you choose when to release back to AWS| automatically released when you stop or 
 -	Allows for flexible software licensing based on IP or MAC
 -	Create a second ENI to license the software and move across different EC2 instances based on requirement of primary vs back EC2 instances. 
 
+ #### Network Access Control list (NACL) & Security groups (SG): 
+ 
+ ![ACL vs SG](https://github.com/vurachaitanya/AWS/blob/master/images/ACL%20vs%20SG.JPG)
+-	Comparing a Parking Garage of a shopping mall with ACL vs SG.
+-	Considering Parking Mall has security cam or guards with ACL’s, car security to SG.
+-	Every car in the garage has the same level of security, same as Network ACL are applied to any resources launched into a subnet.
+-	Car has its own security mechanism, same as SG only apply to those ENI’s or resources they are associated with.
+-	Virtual gateway is used to connect to VPN Connections to data centers.  & IGW  to connect to the outside world. 
+-	 VPC has 2 subnets with routers attached from there on to VPC routers. 
+-	SG are object-based filters which applies to individual resources like EC2, ELB etc.
+-	SG are scoped only in VPC.
+-	Every VPC has default SG and if you don’t create any it will attach to the resources the same SG.
+-	SG are useful for entering traffic and leaving traffic from the resources. 
+-	SG can be applied to multiple instances ie group of EC2 instances. 
+-	We can have multiple SG attached to a group of resources. 
+-	The product of rules is applied when multiple SG are attached.
+-	SG are attached to an objects ENI’s.
+-	NACL’s are applied to Subnets. 
+-	Traffic is processed before it enters or leaves the subnet.
+-	NACLs are subnet scoped objects. They are applied to any instance in the subnet.
+
+SG| NACL
+---|---
+Applied at resource level (ENI)|Applied to subnet level
+Resources can have multiple SG. Product of rules are used|1 subnet associated with one NACL, NACL can have multipel subenets.
+Stateful: Returns traffic is automatically allowed, regardless of any rules| Stateless: Return traffic must be explicityly allowed by rules
+can specify allow rules,but not deny rules|Can specify both allow and  deny rules.
+AWS evaluates all rules, in any order, to decide whether to allow traffic|rules are evaluated in order to decide whether to allow traffic
+
+- **Ingress Traffic = Inbound traffic**
+- **Egress Traffic = Outbound traffic**
