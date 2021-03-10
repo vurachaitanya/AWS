@@ -152,3 +152,6 @@ you choose when to release back to AWS| automatically released when you stop or 
 -	IGW can be attached to ENI 0 to get communicated from outside the world. 
 -	ENI1 can be connected to Virtual private Gateway (VGW) using different port.
 -	Using ENI’s will isolation of traffic of public vs private (Corporate)
+-	Allows for flexible software licensing based on IP or MAC
+-	Create a second ENI to license the software and move across different EC2 instances based on requirement of primary vs back EC2 instances. 
+
