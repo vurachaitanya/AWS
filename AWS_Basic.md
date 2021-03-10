@@ -186,3 +186,25 @@ AWS evaluates all rules, in any order, to decide whether to allow traffic|rules 
 
 - **Ingress Traffic = Inbound traffic**
 - **Egress Traffic = Outbound traffic**
+
+### SG and different cases :
+
+-	ACL: Stateless & SG: Stateful
+-	**CASE 1 :** SG has Inbound (http/TCP/80/0.0.0.0/0)  & Outbound SG’s (All Traffic/ALL/ALL/0.0.0.0/0)
+1.	Client initiates HTTP Request go’s with 80 - Allow
+2.	Ack with other port – Allow
+
+-	**CASE 2 :** SG has NO Inbound & Outbound SG’s (All Traffic/ALL/ALL/0.0.0.0/0)
+1.	 EC2 instance initiates patch request
+2.	As no out bound restriction traffic will – Allow
+3.	Patch update server to communication to EC2 – Allow
+
+-	**CASE 3 :** SG has Inbound (http/TCP/80/0.0.0.0/0)  Inbound & No Outbound SG’s :
+1.	EC2 instance initiates patch request
+2.	No out bound traffic. – Denay
+3.	No connection established so no inbound traffic.
+-	What if ip changes or the resource which dose not have IP’s 
+-	**Self referencing SG** SG create which is across the AZ and reference in inbound or outbound source location.
+![SG referencing ](https://github.com/vurachaitanya/AWS/blob/master/images/SG_self_reference.JPG)
+
+
