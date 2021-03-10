@@ -246,3 +246,13 @@ Rule|Type|Protocal|port range|Destination|allow/deny
 2.	No out bound rule created and default it gos with Deny and packet drops. – Deny 
 
 ![ACL cases](https://github.com/vurachaitanya/AWS/blob/master/images/ACL_rules.JPG)
+
+##### Ephemeral Ports:
+-	Ports which uses for sort time is call Ephemeral ports.
+-	Each resource has different port range for using. How to use inbound in ACL based on below env port range.
+-	**Linux** port range 32768 – 61000
+-	**Elastic load Balancer** 32768 – 61000
+-	**Windows Server 2003** 1025 – 50000
+-	**Windows Server 2008+** 49152 – 65535
+-	**NAT Gateway** 1024-65535
+-	Port range which can be opened from **1024 to 65535** to access all the above listed port ranges in inbound and outbound ranges to access.
