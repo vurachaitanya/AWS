@@ -219,10 +219,7 @@ AWS evaluates all rules, in any order, to decide whether to allow traffic|rules 
 -	**Explicit allow = Specific allow rule**
 -	**Explicit deny = specific deny rule**
 -	Stateless ACL with Inbound & Outbound 
--	**CASE 1** 
-
-
-
+-	By default AWS creates all deny policy and can’t be removed. 
 
 - **NACL Inbound**
 
@@ -237,3 +234,15 @@ Rule|Type|Protocal|port range|Destination|allow/deny
 ---|---|---|---|---|---
 100|All IPV4 traffic|All|All|0.0.0.0/0|Allow
 *|All IPV4 traffic|All|All|0.0.0.0/0|Deny
+
+-	**Case 1 :** Client initiates SSH Request 
+1.	As ssh with 22 port as per rule 100 it allows outbound traffic - Allow
+2.	As per inbound rule 100 it will allow the traffic  back to ec2 in AZ using ACL - Allow
+-	**Case 2 :** EC2 instance initiates patch request **with our outbound 100 rule** 
+1.	As no out bound rule created and default it gos with Deny and packet drops. - Deny
+2.	No communication established inbound.
+-	**Case 3 :** Client initiates SSH Request  **with our outbound 100 rule** 
+1.	As In bound traffic 100 allows it allows the traffic to reach EC2. - Allow
+2.	No out bound rule created and default it gos with Deny and packet drops. – Deny 
+
+![ACL cases](https://github.com/vurachaitanya/AWS/blob/master/images/ACL_rules.JPG)
