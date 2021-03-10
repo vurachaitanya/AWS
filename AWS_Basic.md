@@ -256,3 +256,25 @@ Rule|Type|Protocal|port range|Destination|allow/deny
 -	**Windows Server 2008+** 49152 – 65535
 -	**NAT Gateway** 1024-65535
 -	Port range which can be opened from **1024 to 65535** to access all the above listed port ranges in inbound and outbound ranges to access.
+
+
+#### Network address translation (NAT): NAT Instance vs NAT Gateway
+-	It is used for multiple Private IP’s to convert them to single public IP address and vice versa.
+-	These are key for public to private mapping. 
+-	We have NAT instance which helps route traffic to private resources.
+-	No public IP means IGW architecture will not work or send the packet outside 
+-	In ENI’s Source and destination check should be disabled for NAT instance.
+-	NAT Instances can’t scale, down time required for increasing capacity, Custom scipt required to balance the NAT across AZ etc.
+-	NAT Gateway + EIP
+-	AWS if detects 2 NAT Gateways distributes traffic across AZ. 
+-	NAT Gateways are elastic grow and shrink happens seamlessly.
+-	NAT Gateways handles 45GHz per Sec. If required more can split across the AZ. Max we can have 5 NAT Gateways per AZ.
+
+![NAT Gateways](https://github.com/vurachaitanya/AWS/blob/master/images/NAT%20gateway.JPG)
+
+NAT Gateways | NAT instances
+---|---
+Managed by AWS  & is HA. Create a NAT gateway in each AZ for redundancy and Zone independent architectures | You manage NAT Instances and use scripts to support failover between instances
+Scales up to 45Gbps, 5 Gateways per AZ | Depends on the bandwidth of the instance type
+Cost depends on the amount of data that is sent through the NAT Gateway | Cost depends on the instance type and size
+Can’t associate SG with a NAT Gateway, but can associate SG with resources behind the NAT Gateway | Associate SGs both on NAT instance and the resources behind it
