@@ -114,3 +114,14 @@ Start IP|End IP|Offers|Range
 -	10.0.64.3: reserved by AWS for future use.
 -	10.0.71.255: Network broadcast address.
 -	By default AWS VPC will not allow broadcast addresses. 
+
+#### Elastic Network Interface (ENI):
+-	A virtual network interface that you can attached to an instance is a VPC. Upon creation, ENI’s are inside a VPC and are associated with a subnet.
+-	You can attach any resources with ENI’s.
+-	For every resource created will have default ENI attached to the resources. But those can’t be removed.
+-	But you can add n number of ENI’s to resources and remove them.
+-	ENI will have **MAC, at least one security groups, Internal ip add, Auto assigned external ip, elastic external ip, source /dest.check**. 
+-	Once ENI created in a VPC of specific AZ, we can’t move that to another AZ.
+-	You can detach from any resource and attach it to same resources in AZ.
+-	We have limits for each resource to attach no of ENI. 
+-	Teaming is not supported in EC2 to increase the bandwidth.
