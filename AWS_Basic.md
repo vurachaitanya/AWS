@@ -278,3 +278,8 @@ Managed by AWS  & is HA. Create a NAT gateway in each AZ for redundancy and Zone
 Scales up to 45Gbps, 5 Gateways per AZ | Depends on the bandwidth of the instance type
 Cost depends on the amount of data that is sent through the NAT Gateway | Cost depends on the instance type and size
 Can’t associate SG with a NAT Gateway, but can associate SG with resources behind the NAT Gateway | Associate SGs both on NAT instance and the resources behind it
+
+
+#### VPC Endpoints:
+-	Public AWS services from with in a VPC, traffic is internal and stays internal to VPC.
+-	Types of VPC Endpoints: **1. Interface Endpoints 2. Gateway Endpoints.
