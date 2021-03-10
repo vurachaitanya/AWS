@@ -64,6 +64,22 @@ public and private different| No difference to public vs private, need to have r
 -	Avoid using the default VPC if your VPC will communicate with other VPC’s.
 -	**Default VPC :**  172.31.0.0/16
 -	While creating Subnets 1. Specify Target AZ, 2. Determine CIDR Range (Small: /28, to /16) 3. AWS Reserved first 4 IP’s addresses & Last IP add of the subnet for internal networking purposes. 
+-	With every VPC we will have one routing entry is created in VPC Route.
+-	Each entry has one destination and target.
+-	Multiple routes can be added 
+-	Targets can be Internet gateways, Cloud gateways,  NAT Gateways.
+-	Local target entry is default for each subnet and can’t be removed. 
+-	You can create custom route table for each subnet and main would be fall back.
+-	In VPC we will have VPC Router in Public network and Internet gateway (IGW) acts as communication channel between public and private networks. Virtual private gateway (VPG) to expose to the outside of the cloud or VPC.
+-	If we want to expose S3 in private subnet we need to add VPC routers, internet gateway for which we will add route table with 0.0.0.0/0 target with internet gateway to expose S3 bucket. 
+-	[Find next CIDR](https://cidr.xyz/)
+-	Create custom VPC with 10.0.0.0/16 subnet.
+-	Create routes for 2 applications (Web & Database) in two AZ (us-east1a & us-east1b) = 4 routes.
+-	Create 4 routes with 10.0.0.0/21, 10.0.8.0/21, 10.0.64.0/21, 10.0.72.0/21
+-	Create 4 route tables with our custom VPC created above. 
+-	Associate DB routes with associated subnets routes table. So that it uses specified other than default route table.
+-	By default route table has VPC info(10.0.0.0/16). We can add 0.0.0.0/0 if we want to expose route to external world using Internet gateways or other sources. 
+
 
 #### Private Addressing spaces
 Start IP|End IP|Offers|Range
