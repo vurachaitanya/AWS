@@ -1,2 +1,2 @@
-# AWS-CLI
-AWS CLI Based commands
+# AWS
+AWS Basics
