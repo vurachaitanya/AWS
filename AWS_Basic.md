@@ -206,5 +206,34 @@ AWS evaluates all rules, in any order, to decide whether to allow traffic|rules 
 -	What if ip changes or the resource which dose not have IP’s 
 -	**Self referencing SG** SG create which is across the AZ and reference in inbound or outbound source location.
 ![SG referencing ](https://github.com/vurachaitanya/AWS/blob/master/images/SG_self_reference.JPG)
+-	SG Creates Inbound rules by default and adds itself. So that the resources which are in the same SG can be communicated. 
 
 
+#### NACL :
+-	ACL’s are packet filters. Works like a firewall. Applied on entering/leaving a Subnet boundary.
+-	Set of rules created.
+-	Rules of lower rule number will be target first.
+-	Based on action the packet will be allowed or denied based on the rule it matches with.
+-	Mandatory rule that can’t be edited or removed. It matches any request that has not matched any other rules. It always applied a Deny.
+-	**Implicit deny = default wildcard rule**
+-	**Explicit allow = Specific allow rule**
+-	**Explicit deny = specific deny rule**
+-	Stateless ACL with Inbound & Outbound 
+-	**CASE 1** 
+
+
+
+
+- **NACL Inbound**
+
+Rule|Type|Protocal|port range|source|allow/deny
+---|---|---|---|---|---
+100|All IPV4 traffic|All|All|0.0.0.0/0|Allow
+*|All IPV4 traffic|All|All|0.0.0.0/0|Deny
+
+- **NACL Outbound**
+
+Rule|Type|Protocal|port range|Destination|allow/deny
+---|---|---|---|---|---
+100|All IPV4 traffic|All|All|0.0.0.0/0|Allow
+*|All IPV4 traffic|All|All|0.0.0.0/0|Deny
