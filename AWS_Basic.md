@@ -125,3 +125,21 @@ Start IP|End IP|Offers|Range
 -	You can detach from any resource and attach it to same resources in AZ.
 -	We have limits for each resource to attach no of ENI. 
 -	Teaming is not supported in EC2 to increase the bandwidth.
+#### Internet Gateway (IGW)
+-	**Translates Private Ips to associated public IP address.**
+-	Scalable VPC component that allows communication between instances in your VPC and the internet. When an instance receives traffic from the internet, the IGW translates the destination address to the instances private address and forwards the traffic to the VPC.
+-	Internet gateway can be attached to one VPC only. Can’t span across VPC’s.
+-	Can’t attach multiple gateways to VPC. 
+-	Traffic can be sent from resources to IGW using routers. 
+-	When a EC2 is created with default ENI and Route table it communicates with in VPC. By adding IGW with a new inter added to route table with 0.0.0.0/0 target = IGW1. Which will pass the traffic from EC2 to outside of the world. 
+-	IGW works only 1. if we have resources with public IP’s 2. Router entry for the IGW.
+-	EIP : Keeps your static IP even when the underlying infrastructure changes.
+-	A static Public IPV4 address that you can allocate to your account taken from the pool and release from your account returned to the pool. Address comes from a pool of regional IPV4 add that AWS Manages. 
+
+Elastic IP | Dynamic external IP
+---|---
+your request from AWS IPV4 address pool| assigned upon EC2 Creation
+assign EIP to an EC2 instance(Using ENI)| Can't disassociate add from EC2 instance after launch
+you choose when to release back to AWS| automatically released when you stop or terminate the EC2 instance
+
+
