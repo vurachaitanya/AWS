@@ -299,3 +299,12 @@ Many services are supported | NA
 -	**Default VPC Endpoint Policy:** By default the VPCE policy is unrestricted but can be further locked down. VPCE policies do not overwrite resource-specific policies. EX: S3 bucket policy
 -	**Controlling Access:** Controlling Access to VPCE via NACL’s can be problematic, Instedad, using SG is preferred because you can reference logical networking objects. EX: VPCE
 -	**Multiple VPC Endpoints:** you can have multiple VPCE within the same VPC even from the same service. Each endpoint can have its own policy, and each can be applied to different subnets. Ex the specific subnet route table.
+
+
+#### VPC Peering: 
+-	Its establish connection between two different VPN’s from same account or different account to communicate. 
+-	This is only possible by adding extra VPN Peering router attached CIDR with in same account or other account and add routing table with VPC CIDR network to communicate with other VPC network. 
+-	If A & B VPC’s are connected and C & A are connected, that dose not mean that  B & C are connected. 
+-	VPN Peering can be done between 2 VPC on same account, 2 VPC from different account, 2 VPC from 2 regions. 
+-	We can use DNS resolution for other VPC to identify with FQDN names.
+![VPC Peering](https://github.com/vurachaitanya/AWS/blob/master/images/VPC%20Peering.JPG)
