@@ -308,3 +308,15 @@ Many services are supported | NA
 -	VPN Peering can be done between 2 VPC on same account, 2 VPC from different account, 2 VPC from 2 regions. 
 -	We can use DNS resolution for other VPC to identify with FQDN names.
 ![VPC Peering](https://github.com/vurachaitanya/AWS/blob/master/images/VPC%20Peering.JPG)
+
+
+#### VPC Flow Logs:
+-	Not a Packet capturing tool: Flow logs do not capture the contents of the IP data, but rather the metadata about the IP Data.
+-	What data is captured: Source and destination IP address, Source/destination port numbers, the protocol, number of pkt, no of bytes, start/end time & many more
+-	What can flow logs be attached to:  Can attached to ENI’s, Subnet or VPC.
+-	Configurations for Flow logs: Flow logs capture ingress and egress traffic and can be configured to log accepted rejected or all traffic.
+-	Configurations are locked: Once you configure flow log you can’t change it. You must delete the flow log and recreate another with the desired configurations.
+-	Flow logs are not real time: Flow logs have a several minute delay because of this they are not suitable for real time traffic analysis. 
+-	VPC Flow logs can be stored in Cloud watch or S3.
+-	Once created can’t edit it, need to delete it
+-	IAM roles should be created to access flow logs to cloudwatch or S3
