@@ -283,3 +283,18 @@ Can’t associate SG with a NAT Gateway, but can associate SG with resources beh
 #### VPC Endpoints:
 -	Public AWS services from with in a VPC, traffic is internal and stays internal to VPC.
 -	Types of VPC Endpoints: **1. Interface Endpoints 2. Gateway Endpoints.
+
+Interface Endpoints | Gateway Endpoints
+---|---
+Powered by AWS Private link | It can specify as a target in our route table
+An elastic network interface with a private IP Add | S3 & DynomoDB are supported
+Servers as an entry point for traffic | NA
+Many services are supported | NA
+
+-	Classic Access to S3 
+-	Endpoints are a regional service: Endpoints are region scoped services. You can’t create a VPC endpoint for a VPC in a different region than where the service S3 is located.
+-	**VPC Boundaries:** Endpoints are not extendable across VPC boundaries They can’t be accessed from outside a VPC or from another VPC.
+-	**DNS resolution is required:** DNS resolution is needed with in a VPC the internal VPC DNS redirects request to VPC endpoints. Thus, requiring DNS resolution with the VPC.
+-	**Default VPC Endpoint Policy:** By default the VPCE policy is unrestricted but can be further locked down. VPCE policies do not overwrite resource-specific policies. EX: S3 bucket policy
+-	**Controlling Access:** Controlling Access to VPCE via NACL’s can be problematic, Instedad, using SG is preferred because you can reference logical networking objects. EX: VPCE
+-	**Multiple VPC Endpoints:** you can have multiple VPCE within the same VPC even from the same service. Each endpoint can have its own policy, and each can be applied to different subnets. Ex the specific subnet route table.
