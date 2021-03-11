@@ -291,7 +291,8 @@ An elastic network interface with a private IP Add | S3 & DynomoDB are supported
 Servers as an entry point for traffic | NA
 Many services are supported | NA
 
--	Classic Access to S3 
+#### Classic Access to S3 using VPC Endpoints
+![S3 Classic with VPC Endpoints](https://github.com/vurachaitanya/AWS/blob/master/images/S3%20with%20VPC%20Endpoints.JPG)
 -	Endpoints are a regional service: Endpoints are region scoped services. You can’t create a VPC endpoint for a VPC in a different region than where the service S3 is located.
 -	**VPC Boundaries:** Endpoints are not extendable across VPC boundaries They can’t be accessed from outside a VPC or from another VPC.
 -	**DNS resolution is required:** DNS resolution is needed with in a VPC the internal VPC DNS redirects request to VPC endpoints. Thus, requiring DNS resolution with the VPC.
