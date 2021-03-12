@@ -1,4 +1,4 @@
-## AWS Basics
+## AWS Networking Basics
 
 -	Routers table for two regions and VPC peering connection would be created for communicating two regions. 
 -	Regions are geographically separated locations
@@ -320,3 +320,20 @@ Many services are supported | NA
 -	VPC Flow logs can be stored in Cloud watch or S3.
 -	Once created can’t edit it, need to delete it
 -	IAM roles should be created to access flow logs to cloudwatch or S3
+
+
+
+#### Having HA DBA on one Region to communicate app on another VPC region:
+![DBA HA VPC vs webapp in another VPC](https://github.com/vurachaitanya/AWS/blob/master/images/DB%20HA%20to%20web.JPG)
+-	Having 2 regions east1 and east2
+-	Having above regions each VPC each (DBA VPC & WEB VPC)
+-	DBA has 2 AZ with one single Subnet across two different DB’s
+-	Add a VPC Peer to communicate between to VPC’s
+-	Add subnet of app with CIDR of DB VPC (196.168.0.0/16 target nat-id)
+-	Add apps NAT to get public access (0.0.0.0/0 Peer VPC IP Target: PCX-id)
+-	Subnet will have default local subnet (10.0.0.0/16 target local)
+-	Add DB VPC Routing table with local (192.168.0.0/16 target local)
+-	Add Peering VPN Webapp CIDR ( 10.0.0.0/16 target pcx-id)
+-	Add security group (type mysql/port3306/protocol tcp/source 10.0.0.0/16)
+-	Enabling DNS resolution is enabled from requestor VPC.
+![SG DBA](https://github.com/vurachaitanya/AWS/blob/master/images/SG%20for%20DB.JPG)
