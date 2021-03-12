@@ -337,3 +337,39 @@ Many services are supported | NA
 -	Add security group (type mysql/port3306/protocol tcp/source 10.0.0.0/16)
 -	Enabling DNS resolution is enabled from requestor VPC.
 ![SG DBA](https://github.com/vurachaitanya/AWS/blob/master/images/SG%20for%20DB.JPG)
+
+
+#### Network performance:
+##### High performance computing in AWS: 
+-	High compute data like Gnome, ML, Bigdata computes etc.
+-	Mass amount of CPU, GPU, 3D rendering compute. 
+-	If we have 2 EC2 across two different AZ the communication between two AZ will be slow 
+-	So make sure we have all 4 instances in one AZ.
+##### High performance computing in AWS :
+-	Having High performance cluster all in one AZ will give you high performance. 
+-	Cut down the latency.
+-	Communication thought put bigger for each EC2 instance.
+-	**Instance type** : Enhanced networking uses single root I/O virtualization to provide high performance networking capabilities on supported instance types.
+-	**Placement Group**: using clustering placement group packs instances close together inside an AZ. Type we **cluster, partition and spread.**
+-	**Enabling Enhanced Networking:** All Amazon EC2 instance types support 1500 MTU, and many current instance sizes support 9001 MTU or jumbo frames.
+-	Resources instance types which support different Network bandwidth 
+1.	Elastic Network adapter(ENA) gets 100Gbps and supported instances family’s like A2,c5,F1,G3,4 etc.
+2.	Intel 82599 Virtual function interface support 10Gbpds and supports instance family like C3,C4,D2,I2 etc.
+
+##### Cluster Placement group :
+-	Within one AZ with in a VPC we can create cluster placement groups for high computing activities to communicate effectively without any latency.
+-	It’s a logical grouping to have all instances created under same AZ and VPC for Cluster placement group.
+-	Cluster placement group can be spanned across VPC groups by using VPC Peering.
+-	Recommend to have same size of any resources group.
+-	Remove and add more instances placement group 
+-	We might get some time insufficient capacity then we need to stop all and restart the instacnes so that it moves to different machine which has the capacity
+-	Instance with in cluster placement group can use up to 10Gbps for single flow traffic.
+-	Network traffic to the internet and over an AWS Direct connect connection to on premises resources is limited to 5Gbps.
+
+##### Enhanced Networking :
+-	**Maximum transmission unit (MTU) :** Largest permissible pkt that can be passed over the connection.
+-	**Ethernet Frames: ** Most ethernet v2 format which supports 1500MTU, which is the largest ethernet pkt size supported over most of the internet. 
+-	**Jumbo Frames** : Some EC2 instances types support 9001MTU or jumbo frames.
+-	**Use with caution** Internet bound traffic or any traffic that leaves a VPC will drop or break down the pkt size to 1500 MTU.
+
+![Jumbo frame and Cluster placement group](https://github.com/vurachaitanya/AWS/blob/master/images/Network%20Jumbo%20frames%20cluster%20groups.JPG)
