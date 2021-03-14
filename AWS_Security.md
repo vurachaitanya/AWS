@@ -67,3 +67,35 @@ Rotation occurs every 3 years | rotation occurs once a year
 -	Can integrate with RDS to sync
 -	Secrets are encrypted using KMS
 -	Used mostly with RDS
+
+
+#### Cloud HSM 
+-	Hardware security module
+-	AWS provisions the encryption hardware for us
+-	We use our won client to perform encryption
+-	Dedicated hardware
+-	Tamper resistant 
+-	FIPS 140-2(L3)
+-	CloudHSM software can be used to manage encryption keys and users
+-	IAM permissions can only be used to create, read, update and delete your HSM cluster.
+-	It should be added to each AZ for HA
+-	It supports Symmetric and asymmetric encryption.
+-	If we lose AWS CloudHSM credential, we can’t restore them & it’s not AWS responsibility.
+
+
+#### EC2 Proxy servers:
+-	**What is firewall: ** A deice that sits at the border of different networks and monitors traffic flows.
+-	Reads pkt data and allow or deny traffic.
+-	Establishes a barrier to offer different security levels. 
+-	Higher the Networking layer higher the cost of the computing process to flow.
+-	Web application firewall – WAP
+-	Advance version of WAP is – AWS Shield 
+-	Proxy server = Firewall 
+-	It can sit in public or private subnets of AZ in a VPC.
+-	It handles out going traffic and uses Gateway to send and receive the traffic. 
+-	Using proxy servers need application support. 
+-	It can be configured inside browser, OS, application. 
+-	User connects to the proxy server using Username/passwd to destination servers
+-	Proxy server can be acts as a **Caching server**, **Filter** which filters malware using IP address as we can’t see the layers. 
+-	AWS EC2 Proxy server instance acts as an additional filter for AWS network filtering.
+![Networking layers](https://github.com/vurachaitanya/AWS/blob/master/images/Network%20security%20layers.JPG)
