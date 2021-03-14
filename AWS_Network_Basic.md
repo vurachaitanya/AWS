@@ -1,5 +1,7 @@
 ## AWS Networking Basics
 
+##### Ref from : AWS Certified Advanced Networking - Specialty 2020
+
 -	Routers table for two regions and VPC peering connection would be created for communicating two regions. 
 -	Regions are geographically separated locations
 -	Availability zones are having different datacenters in same region.
