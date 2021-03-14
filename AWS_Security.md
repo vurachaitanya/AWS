@@ -99,3 +99,33 @@ Rotation occurs every 3 years | rotation occurs once a year
 -	Proxy server can be acts as a **Caching server**, **Filter** which filters malware using IP address as we can’t see the layers. 
 -	AWS EC2 Proxy server instance acts as an additional filter for AWS network filtering.
 ![Networking layers](https://github.com/vurachaitanya/AWS/blob/master/images/Network%20security%20layers.JPG)
+
+#### Web application firewall (WAF) & AWS Shield overview
+-	WAF filters at layer 7 which is at HTTP/HTTPS.
+-	WAF can be implemented at 3 levels 1. Application Load Balancer 2. API Gateway & 3. Cloudfront.
+-	Add a web access control list (ACL) and add rules at IP address, HTTP Headders, body or URL Strings. 
+-	This will protect us from SQL injections & Cross site scripting.
+-	Can also work on Geo Match
+-	DDos attacks.
+-	How many network packets can pass through? 
+
+#### AWS Firewall manager:
+-	Manages all rules for our WAF
+-	Application Load Balancer
+-	API Gateway 
+-	cloudFront
+
+
+#### AWS Shield :
+-	AWS Shield standard is free and provides protection from attacks on layers 3 & 4.
+-	AWS Shield Advance will support DDoS attack and starts at $3k per month & provides 24/7 protection from attacks on EC2, LB, CloudFront & Route53.
+-	Can only be used with Application Load balancer, Classic load balancer, Elastic IP & BFcloudfront.
+
+
+#### AWS Guard Duty:
+-	Is a threat detection service that provides insights into activity. 
+-	Monitors for malicious activity and unauthorized behavior in S3.
+-	IT uses AI/ML intelligence by anomaly detection and thread detection to identify and prevents it.
+-	Monitors account and resources like Cloudtrail Event logs, VPC Flow logs, DNS logs.
+-	Integrates with cloudwatch events and watches activity inside your AWS account. 
+-	Based on the analyses we can integrate with lamda function to automatic remediation or Malware and no extra infrastructure cost. 
