@@ -1,5 +1,7 @@
 ## AWS_Security
 
+##### Ref :  Logging and Security for Associate AWS Solutions Architects
+
 #### AWS Security Basic :
 -	**At rest :** Designed to protect data against unauthorized access and theft.
 -	**In Transit :** Designed to protect data that is being transferred between two places.
