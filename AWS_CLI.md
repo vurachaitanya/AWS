@@ -11,4 +11,12 @@
 -	`aws configure list-profiles ` -- List profiles
 -	`aws configure get region –profile chaitu `  -- list profile specific region configured 
 -	[AWS CLI official 57Pg](https://docs.aws.amazon.com/cli/latest/userguide/aws-cli.pdf)
--	
+-	`aws iam list-users --profile chaitu` list all the users created throught IAM.
+-	list current user's info : `aws iam get-user`
+-	list all security groups : `aws ec2 describe-security-groups`
+-	list all keypairs  `aws ec2 describe-key-pairs`
+-	[Other userful cheetsheet](https://gist.github.com/apolloclark/b3f60c1f68aa972d324b)
+-	List API Gateway IDs and Names: `aws apigateway get-rest-apis | jq -r ‘.items[ ] | .id+” “+.name’`
+-	[AWS CLI Cheetsheet](https://www.bluematador.com/learn/aws-cli-cheatsheet)
+-	[AWS Cheetsheet](https://dev.to/mdminhazulhaque/aws-cli-cheatsheet-15f2)
+
