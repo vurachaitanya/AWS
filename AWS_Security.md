@@ -41,3 +41,29 @@ Used in S3 using KMS | More configurable
 Support key rotation | Support key rotation
 Key rotation can’t be disabled | key rotation is optional
 Rotation occurs every 3 years | rotation occurs once a year
+
+#### AWS Systems Manager Parameter store
+-	Securely store configurations and secrets
+-	Optional KMS to encrypt our configurations
+-	Scalable, durable and free to use
+-	Allows version tracking of configurations and secrets
+-	IAM permissions needs 1. cloudwatch events & 2 Cloudformatio
+
+![AWS System manager parameter sotre interactin with app](https://github.com/vurachaitanya/AWS/blob/master/images/AWS%20Systems%20manager%20parameter%20store.JPG)
+
+-	When an app is created we can route our requests to AWS System manager parameter store so with required IAM access.
+-	Once it has the access it System manager will automatically checks with KMS can decrypt configurations 
+-	Once its decrypts it request configuration parameter etc.
+-	**NOTE** No direct interacting with KMS, SSM Parameter store handles that interaction for us. 
+-	Allows us to securely store our configurations and secrets along with version tracking
+-	Define a hierarchy to store parameters – Plaintext or encrypted parameters
+-	GetParameters or GetParametersByPath API
+
+
+#### AWS Secrets managers :
+-	Designed to store secrets
+-	Can force rotation of your secrets every X no of days
+-	Can automate the generation of secrets on the rotation
+-	Can integrate with RDS to sync
+-	Secrets are encrypted using KMS
+-	Used mostly with RDS
