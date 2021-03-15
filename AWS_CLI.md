@@ -15,8 +15,8 @@
 -	list current user's info : `aws iam get-user`
 -	list all security groups : `aws ec2 describe-security-groups`
 -	list all keypairs  `aws ec2 describe-key-pairs`
--	[Other userful cheetsheet](https://gist.github.com/apolloclark/b3f60c1f68aa972d324b)
+-	[Other userful cheatsheet](https://gist.github.com/apolloclark/b3f60c1f68aa972d324b)
 -	List API Gateway IDs and Names: `aws apigateway get-rest-apis | jq -r ‘.items[ ] | .id+” “+.name’`
--	[AWS CLI Cheetsheet](https://www.bluematador.com/learn/aws-cli-cheatsheet)
--	[AWS Cheetsheet](https://dev.to/mdminhazulhaque/aws-cli-cheatsheet-15f2)
+-	[AWS CLI Cheatsheet](https://www.bluematador.com/learn/aws-cli-cheatsheet)
+-	[AWS Cheatsheet](https://dev.to/mdminhazulhaque/aws-cli-cheatsheet-15f2)
 
