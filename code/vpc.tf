@@ -75,10 +75,10 @@ resource "aws_security_group" "nat" {
 }
 
 resource "aws_instance" "nat" {
-  ami                         = "ami-30913f47" # this is a special ami preconfigured to do NAT
+  ami                         = "ami-013f17f36f8b1fefb" # this is a special ami preconfigured to do NAT----changed to ubuntu 18.04
   availability_zone           = "us-east-1a"
   instance_type               = "m1.small"
-  key_name                    = var.aws_key_name
+  #key_name                    = var.aws_key_name
   vpc_security_group_ids      = ["${aws_security_group.nat.id}"]
   subnet_id                   = aws_subnet.us-east-1a-public.id
   associate_public_ip_address = true
