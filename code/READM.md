@@ -1,5 +1,6 @@
 ## POC on AWS 
 #### [Reff link of the code](https://nickcharlton.net/posts/terraform-aws-vpc.html)
+#### [Reff link](https://medium.com/appgambit/terraform-aws-vpc-with-private-public-subnets-with-nat-4094ad2ab331)
 
 #### USE Case :
 -	Create VPC with 2 Subnet (Public, Private)
