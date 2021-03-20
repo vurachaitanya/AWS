@@ -19,4 +19,6 @@
 -	List API Gateway IDs and Names: `aws apigateway get-rest-apis | jq -r ‘.items[ ] | .id+” “+.name’`
 -	[AWS CLI Cheatsheet](https://www.bluematador.com/learn/aws-cli-cheatsheet)
 -	[AWS Cheatsheet](https://dev.to/mdminhazulhaque/aws-cli-cheatsheet-15f2)
-
+-	`aws ec2 describe-images --owners self amazon` -- List all the images whos owner is Amazon
+-	`aws ec2 describe-images --owners self amazon --filters "Name=root-device-type,Values=ebs"` -- AMI's with EBS volume for root device.
+- `aws ssm get-parameters-by-path --path /aws/service/ami-amazon-linux-latest --query "Parameters[].Name"` ---list latest Amazon images path and types
