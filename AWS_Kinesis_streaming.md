@@ -10,3 +10,4 @@
 -	-  AWS Kinesis Data Analytics
 -	-  AWS Kinesis Consumer library – (Java)
 -	-  AWS Kinesis Data Frames 
+![AWS Kinesis Flow](https://github.com/vurachaitanya/AWS/blob/master/images/AWS%20Kinesis.png)
