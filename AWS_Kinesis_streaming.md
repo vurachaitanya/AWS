@@ -20,6 +20,12 @@
 -	- GetRecords(): 5 transactions per seconds per shard.
 -	-  Data: 2MB per Second per shard.
 -	- if multiple consumers are there 400 KBps transaction.
+![Kinesis Data Stream Flow](https://github.com/vurachaitanya/AWS/blob/master/images/Kinesis%20data%20Streams.JPG)
 -	`aws kinesis register-stream-consumer –stream-arn`
 -	**Glue Data Catalog** -- Convert to columnar format.
+
+### Terraform resources blocks
+##### [kinesis_stream](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kinesis_stream#example-usage)
+##### [aws_kinesis_analytics_application](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kinesis_analytics_application#kinesis-stream-input)
+##### [aws_kinesis_firehose_delivery_stream](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kinesis_firehose_delivery_stream#example-usage)
 
