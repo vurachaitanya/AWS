@@ -33,6 +33,7 @@
 
 ## Kinesis Demo for EC2 logs to data stream
 [Reff video](https://www.youtube.com/watch?v=ZErwfH-OLk4)
+![Kinesis Arch dig](https://github.com/vurachaitanya/AWS/blob/master/images/Kinesis_Arch.png)
 -	Kinesis-demo: For EC2 instance we add Role with S3 + Kinesis full access 
 -	Kinesis-demo : group created with (S3,Kinesis full access)
 -	kinesis-demo: user created with programmatical access. With kinesis-demo as group
