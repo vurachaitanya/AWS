@@ -1,6 +1,7 @@
 ## AWS Objects
 
 #### AssumeRole:
+- [Reff doc](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html)
 - Returns a set of temporary security credentials that you can use to access AWS resources that you might not normally have access to. These temporary credentials consist of an access key ID, a secret access key, and a security token. Typically, you use AssumeRole within your account or for cross-account access
 - You cannot use AWS account root user credentials to call AssumeRole. You must use credentials for an IAM user or an IAM role to call AssumeRole.
 
