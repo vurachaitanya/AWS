@@ -42,7 +42,9 @@
 -	Create Kinesis Data streams with kinesis-demo name and 1 shards.
 -	Create kinesis Firehose to push the data to data streams from EC2
 -	Kinesis-demo Firehose is created with kinesis-demo1 data streams inputs.
+![Kinesis dashboard](https://github.com/vurachaitanya/AWS/blob/master/images/kinesis_dashboard.png)
 -	Create S3 bucket to store data pushed to kinesis streamskinesis firehose to  S3 bucket. In N.Virginia - kinesis-demo12331
+![S3 Bucket log](https://github.com/vurachaitanya/AWS/blob/master/images/Kinesis_logs_in_S3.png)
 -	Using Cloud shell connect to EC2 instances. ssh -i "kinesis.pem" ec2-user@ec2-54-160-52-121.compute-1.amazonaws.com
 -	Copy pem keys in cloud shell and connect to EC2 instance.
 -	Install kinesis agent on EC2 instance from the link: https://docs.aws.amazon.com/firehose/latest/dev/writing-with-agents.html
@@ -56,6 +58,8 @@
 -	Update the agent.json file in /etc/aws-kinesis location.
 -	Start the Agent : ./etc/init.d/aws-kinesis-agent start && ps -ef|grep kinesis
 -	Logs can be checked from tail aws-kinesis-agent.log
+![Agent logs](https://github.com/vurachaitanya/AWS/blob/master/images/kinesis_agent_logs.png)
+
 
 #### Deleting : 
 1.	Delete EC2 instance
