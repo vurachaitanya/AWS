@@ -22,7 +22,7 @@
 
 
 ### if you update git from UI, So get the latest code by 
-- `git pull https://git-codecommit.us-gov-west-1.amazonaws.com/v1/repos/chaitutest` - pull the updated code before editing to get latest version
+- `git pull https://git-codecommit.` - pull the updated code before editing to get latest version
 
 
 
