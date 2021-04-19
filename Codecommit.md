@@ -37,9 +37,9 @@
 
 
 ### Marge branch with master
-`git checkout master` - checkout master branch
-`git merge branch1` - Merge with branch1
-`git push origin master` - commit to master branch
+- `git checkout master` - checkout master branch
+- `git merge branch1` - Merge with branch1
+- `git push origin master` - commit to master branch
 
 
 
