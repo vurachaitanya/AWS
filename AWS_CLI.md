@@ -21,3 +21,5 @@
 -	`aws ec2 describe-images --owners self amazon` -- List all the images whos owner is Amazon
 -	`aws ec2 describe-images --owners self amazon --filters "Name=root-device-type,Values=ebs"` -- AMI's with EBS volume for root device.
 - `aws ssm get-parameters-by-path --path /aws/service/ami-amazon-linux-latest --query "Parameters[].Name"` ---list latest Amazon images path and types
+- `aws iam get-account-summary|jq .SummaryMap.Users` -- Account information and  grep summary map users list
+- `aws iam list-policies --scope Local --only-attached --policy-usage-filter PermissionsPolicy` -- Policy details (ID, Name), ARN, Path, CreateDate date, update date etc
