@@ -17,20 +17,26 @@
   - `resource` is the portion that identifies the specific resource by name.
   - The Region portion of the ARN is blank because IAM resources are global.
  ```
- arn:aws:iam::account-id:root  
-arn:aws:iam::account-id:user/user-name-with-path
-arn:aws:iam::account-id:group/group-name-with-path
-arn:aws:iam::account-id:role/role-name-with-path
-arn:aws:iam::account-id:policy/policy-name-with-path
-arn:aws:iam::account-id:instance-profile/instance-profile-name-with-path
-arn:aws:sts::account-id:federated-user/user-name
-arn:aws:sts::account-id:assumed-role/role-name/role-session-name
-arn:aws:iam::account-id:mfa/virtual-device-name-with-path
-arn:aws:iam::account-id:u2f/u2f-token-id
-arn:aws:iam::account-id:server-certificate/certificate-name-with-path
-arn:aws:iam::account-id:saml-provider/provider-name
-arn:aws:iam::account-id:oidc-provider/provider-name
- 
+arn:aws:iam::123456789012:root
+arn:aws:iam::123456789012:user/JohnDoe
+arn:aws:iam::123456789012:user/division_abc/subdivision_xyz/JaneDoe
+arn:aws:iam::123456789012:group/Developers
+arn:aws:iam::123456789012:group/division_abc/subdivision_xyz/product_A/Developers
+arn:aws:iam::123456789012:role/S3Access
+arn:aws:iam::123456789012:role/application_abc/component_xyz/RDSAccess
+arn:aws:iam::123456789012:role/aws-service-role/access-analyzer.amazonaws.com/AWSServiceRoleForAccessAnalyzer
+arn:aws:iam::123456789012:role/service-role/QuickSightAction
+arn:aws:iam::123456789012:policy/UsersManageOwnCredentials
+arn:aws:iam::123456789012:policy/division_abc/subdivision_xyz/UsersManageOwnCredentials
+arn:aws:iam::123456789012:instance-profile/Webserver
+arn:aws:sts::123456789012:federated-user/JohnDoe
+arn:aws:sts::123456789012:assumed-role/Accounting-Role/JaneDoe
+arn:aws:iam::123456789012:mfa/JaneDoeMFA
+arn:aws:iam::123456789012:u2f/user/JohnDoe/default (U2F security key)
+arn:aws:iam::123456789012:server-certificate/ProdServerCert
+arn:aws:iam::123456789012:server-certificate/division_abc/subdivision_xyz/ProdServerCert
+arn:aws:iam::123456789012:saml-provider/ADFSProvider
+arn:aws:iam::123456789012:oidc-provider/GoogleProvider
  ```
 
 ### IAM Policy
