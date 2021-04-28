@@ -62,7 +62,27 @@ arn:aws:iam::123456789012:oidc-provider/GoogleProvider
 }
  ```
  - You can use wildcards in the resource portion of the ARN to specify multiple users or user groups or policies. For example, to specify all users working on product_1234, you would use: `arn:aws:iam::123456789012:user/division_abc/subdivision_xyz/product_1234/*`
-- 
+- Let's say you have users whose names start with the string app_. You could refer to them all with the following ARN. `arn:aws:iam::123456789012:user/division_abc/subdivision_xyz/product_1234/app_*`
+- In this example, Jules in the Marketing_Admin user group creates a project-based user group within the /marketing/ path. Jules assigns users from different parts of the company to the user group. This example illustrates that a user's path isn't related to the user groups the user is in.
+  - The marketing group has a new product they'll be launching, so Jules creates a new user group in the /marketing/ path called Widget_Launch. Jules then assigns the following policy to the user group, which gives the user group access to objects in the part of the example_bucket that is designated to this particular launch.
+ ```
+ {
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "s3:*",
+      "Resource": "arn:aws:s3:::example_bucket/marketing/newproductlaunch/widget/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "s3:ListBucket*",
+      "Resource": "arn:aws:s3:::example_bucket",
+      "Condition": {"StringLike": {"s3:prefix": "marketing/newproductlaunch/widget/*"}}
+    }
+  ]
+}
+ ```
 
 ### IAM Policy
 ![image](https://user-images.githubusercontent.com/6918419/116284654-f1539e00-a7aa-11eb-957e-cffe92b84090.png)
