@@ -1,5 +1,8 @@
 ## IAM Access
 
+### PATH :
+- Just because you give a user and user group the same path doesn't automatically put that user in that user group. For example, you might create a Developers user group and specify its path as /division_abc/subdivision_xyz/product_1234/engineering/. Just because you create a user named Bob and give him that same path doesn't automatically put Bob in the Developers user group. IAM doesn't enforce any boundaries between users or user groups based on their paths. Users with different paths can use the same resources
+
 ### IAM Roles:
 
 ### IAM ARN :
