@@ -38,6 +38,31 @@ arn:aws:iam::123456789012:server-certificate/division_abc/subdivision_xyz/ProdSe
 arn:aws:iam::123456789012:saml-provider/ADFSProvider
 arn:aws:iam::123456789012:oidc-provider/GoogleProvider
  ```
+ - The following example shows a policy that you could assign to Richard to allow him to manage his own access keys. Notice that the resource is the IAM user Richard.
+ ```
+ {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ManageRichardAccessKeys",
+            "Effect": "Allow",
+            "Action": [
+                "iam:*AccessKey*",
+                "iam:GetUser"
+            ],
+            "Resource": "arn:aws:iam::*:user/division_abc/subdivision_xyz/Richard"
+        },
+        {
+            "Sid": "ListForConsole",
+            "Effect": "Allow",
+            "Action": "iam:ListUsers",
+            "Resource": "*"
+        }
+    ]
+}
+ ```
+ - You can use wildcards in the resource portion of the ARN to specify multiple users or user groups or policies. For example, to specify all users working on product_1234, you would use: `arn:aws:iam::123456789012:user/division_abc/subdivision_xyz/product_1234/*`
+- 
 
 ### IAM Policy
 ![image](https://user-images.githubusercontent.com/6918419/116284654-f1539e00-a7aa-11eb-957e-cffe92b84090.png)
