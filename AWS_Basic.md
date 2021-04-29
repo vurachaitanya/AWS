@@ -1,5 +1,12 @@
 ## AWS Objects
 
+
+### SID :
+- The Sid (statement ID) is an optional identifier that you provide for the policy statement. You can assign a Sid value to each statement in a statement array. In services that let you specify an ID element, such as SQS and SNS, the Sid value is just a sub-ID of the policy document's ID. In IAM, the Sid value must be unique within a JSON policy.
+- The Sid element supports uppercase letters, lowercase letters, and numbers.
+- In IAM, the Sid is not exposed in the IAM API. You can't retrieve a particular statement based on this ID.
+- `"Sid": "1"`
+
 #### AssumeRole:
 - [AWS Reff Doc](https://docs.aws.amazon.com/STS/latest/APIReference/API_AssumeRole.html)
 - Returns a set of temporary security credentials that you can use to access AWS resources that you might not normally have access to. These temporary credentials consist of an access key ID, a secret access key, and a security token. Typically, you use AssumeRole within your account or for cross-account access
