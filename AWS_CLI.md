@@ -24,3 +24,6 @@
 - `aws iam get-account-summary|jq .SummaryMap.Users` -- Account information and  grep summary map users list
 - `aws iam list-policies --scope Local --only-attached --policy-usage-filter PermissionsPolicy` -- Policy details (ID, Name), ARN, Path, CreateDate date, update date etc
 - `aws iam get-user --user-name test --profile personal` - List user test for the aws profile personal [AWS Reff](https://docs.aws.amazon.com/cli/latest/reference/iam/get-user.html)
+ - `aws codecommit list-repositories` - ListRepositories  , which lists all AWS CodeCommit repositories asso-ciated with your AWS account.
+ - `aws codecommit list-branches --repository-name <Repo name>` - ListBranches , which lists all branches for a specified repository.
+ - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
