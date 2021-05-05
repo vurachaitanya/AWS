@@ -27,3 +27,4 @@
  - `aws codecommit list-repositories` - ListRepositories  , which lists all AWS CodeCommit repositories asso-ciated with your AWS account.
  - `aws codecommit list-branches --repository-name <Repo name>` - ListBranches , which lists all branches for a specified repository.
  - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
+ - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
