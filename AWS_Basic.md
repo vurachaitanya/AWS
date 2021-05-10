@@ -49,4 +49,16 @@
 
 ###  Systems Manager Agent (SSM Agent) :  [AWS Reff](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent.html)
 - Amazon software that can be installed and configured on an EC2 instance, an on-premises server, or a virtual machine (VM). SSM Agent makes it possible for Systems Manager to update, manage, and configure these resources. The agent processes requests from the Systems Manager service in the AWS Cloud, and then runs them as specified in the request. SSM Agent then sends status and execution information back to the Systems Manager service by using the Amazon Message Delivery Service (service prefix: ec2messages).
-- 
+
+
+### AWS Marketplace Management Portal : [AWS Reff](https://docs.aws.amazon.com/marketplace/latest/userguide/marketplace-management-portal-user-access.html)
+- AWS Marketplace is a digital catalog with thousands of software listings from independent software vendors that make it easy to find, test, buy, and deploy software that runs on AWS.
+- [AWS Marketplace ](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html)
+- [Below list from AWS Reff](https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html)
+```
+AWSMarketplaceRead-only
+AWSMarketplaceManageSubscriptions
+AWSPrivateMarketplaceRequests
+AWSPrivateMarketplaceAdminFullAccess
+AWSMarketplaceFullAccess
+```
