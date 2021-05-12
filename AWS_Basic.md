@@ -68,3 +68,23 @@ AWSMarketplaceFullAccess
 - [Advt of Org](https://segment.com/blog/segment-aws-organizations/)
 - AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources. Using AWS Organizations, you can programmatically create new AWS accounts and allocate resources, group accounts to organize your workflows, apply policies to accounts or groups for governance, and simplify billing by using a single payment method for all of your accounts.
 - In addition, AWS Organizations is integrated with other AWS services so you can define central configurations, security mechanisms, audit requirements, and resource sharing across accounts in your organization. AWS Organizations is available to all AWS customers at no additional charge.
+
+
+
+### AWS Marketplace : 
+-	AWS Marketplace is a curated digital catalog that makes it easy for customers to find, buy, consume, and manage third-party software, services, and data that customers need to build solutions and run their businesses. AWS Marketplace includes thousands of software listings from popular categories
+-	You can select commercial software from well-known vendors, as well as many widely used open source offerings.
+-	AWS Marketplace as a buyer (subscriber) or as a seller (provider), or both. Anyone with an AWS account can use AWS Marketplace as a consumer and can register to become a seller. A seller can be an independent software vendor (ISV), value-added reseller, or individual that has something to offer that works with AWS products and services
+-	[AWS Marketplace Doc Ref](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html)
+
+### AWS Data Exchange:  
+-	AWS Data Exchange makes it easy to find, subscribe to, and use third-party data in the cloud. Qualified data providers include category-leading brands.  AWS Data Exchange makes it easy to reach the millions of AWS customers migrating to the cloud by removing the need to build and maintain infrastructure for data storage, delivery, billing, and entitling.
+1,000 data products now available from more than 80 qualified data providers in AWS Marketplace.
+-	Blog to use AWS Data Exchange  [Private & Public product group](https://aws.amazon.com/blogs/awsmarketplace/creating-customized-data-products-on-aws-data-exchange/)
+
+### AWS License manager: 
+-	AWS License Manager is a service that makes it easier for you to manage your software licenses from software vendors (for example, Microsoft, SAP, Oracle, and IBM) centrally across AWS and your on-premises environments. This provides control and visibility into the usage of your licenses, enabling you to limit licensing overages and reduce the risk of non-compliance and misreporting.
+-	License Manager also tracks the end-user identity and the underlying resource identifier, if available, associated with each check out, along with the check-out time.
+-	License Manager supports a variety of different licensing models including perpetual licenses, floating licenses, subscription licenses, and usage-based licenses. 
+-	[AWS Doc Ref](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html)
+
