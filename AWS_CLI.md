@@ -9,6 +9,7 @@
 -	`aws s3 mb s3://testbucket12323232` to create a new s3 bucket.
 -	`aws configure list`  -- list of configuration available in detail
 -	`aws configure get region –profile chaitu `  -- list profile specific region configured 
+-	`aws sts decode-authorization-message --encoded-message <encodedmessage>` If EC2 failed with an error and need to decode it.
 -	[AWS CLI official 57Pg](https://docs.aws.amazon.com/cli/latest/userguide/aws-cli.pdf)
 -	`aws iam list-users --profile chaitu` list all the users created throught IAM.
 -	list current user's info : `aws iam get-user`
