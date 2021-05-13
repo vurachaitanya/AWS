@@ -23,12 +23,17 @@
 -	`aws ec2 describe-images --owners self amazon --filters "Name=root-device-type,Values=ebs"` -- AMI's with EBS volume for root device.
 - `aws ssm get-parameters-by-path --path /aws/service/ami-amazon-linux-latest --query "Parameters[].Name"` ---list latest Amazon images path and types
 - `aws iam get-account-summary|jq .SummaryMap.Users` -- Account information and  grep summary map users list
-- `aws iam list-policies --scope Local --only-attached --policy-usage-filter PermissionsPolicy` -- Policy details (ID, Name), ARN, Path, CreateDate date, update date etc
 - `aws iam get-user --user-name test --profile personal` - List user test for the aws profile personal [AWS Reff](https://docs.aws.amazon.com/cli/latest/reference/iam/get-user.html)
- - `aws codecommit list-repositories` - ListRepositories  , which lists all AWS CodeCommit repositories asso-ciated with your AWS account.
- - `aws codecommit list-branches --repository-name <Repo name>` - ListBranches , which lists all branches for a specified repository.
- - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
- - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
+- `aws codecommit list-repositories` - ListRepositories  , which lists all AWS CodeCommit repositories asso-ciated with your AWS account.
+- `aws codecommit list-branches --repository-name <Repo name>` - ListBranches , which lists all branches for a specified repository.
+- `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
+- `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
+
+### Policy :
+- `aws iam list-policies` - List all policy 
+- `aws iam generate-service-last-accessed-details --arn arn:aws-us-gov:iam::aws:policy/AWSIoTDataAccess` list Policy last accessed details.
+- `aws iam list-policies --scope Local --only-attached --policy-usage-filter PermissionsPolicy` -- Policy details (ID, Name), ARN, Path, CreateDate date, update date etc
+
 
 ### Organization :
 - `aws organizations list-roots` - list the root organization
