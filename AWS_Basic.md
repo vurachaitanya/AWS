@@ -61,6 +61,10 @@
 ![AWS CloudTrail](https://github.com/vurachaitanya/AWS/blob/master/images/AWS%20CloudTrial.JPG)
 
 
+### EC2 :
+- Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+- [AWS EC2 Policy](https://aws.amazon.com/blogs/security/demystifying-ec2-resource-level-permissions/)
+- [Replacing SSH access with AWS Systems Manager](https://aws.amazon.com/blogs/mt/vr-beneficios-session-manager/)
 
 ### AWS Config :
 - [AWS Reff Doc](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
