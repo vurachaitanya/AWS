@@ -14,6 +14,20 @@
 
 **Example:** For cross-account access, imagine that you own multiple accounts and need to access resources in each account. You could create long-term credentials in each account to access those resources. However, managing all those credentials and remembering which one can access which account can be time consuming. Instead, you can create one set of long-term credentials in one account. Then use temporary security credentials to access all the other accounts by assuming roles in those accounts
 
+
+### AWS Organizations :
+- [AWS Reff](https://aws.amazon.com/organizations/)
+- [Advt of Org](https://segment.com/blog/segment-aws-organizations/)
+- AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources. Using AWS Organizations, you can programmatically create new AWS accounts and allocate resources, group accounts to organize your workflows, apply policies to accounts or groups for governance, and simplify billing by using a single payment method for all of your accounts.
+- In addition, AWS Organizations is integrated with other AWS services so you can define central configurations, security mechanisms, audit requirements, and resource sharing across accounts in your organization. AWS Organizations is available to all AWS customers at no additional charge.
+
+
+
+### AWS Organizational Units (OU's):
+- You can group your accounts into organizational units (OUs) and attach different access policies to each OU. For example, if you have accounts that must access only the AWS services that meet certain regulatory requirements, you can put those accounts into one OU. You then can attach a policy to that OU that blocks access to services that do not meet those regulatory requirements. You can nest OUs within other OUs to a depth of five levels, providing flexibility in how you structure your account groups.
+- [AWS CLI Org](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_ous.html)
+
+
 ### AWS X-Ray :
 - [AWS Reff Doc](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html)
 - AWS X-Ray is a service that collects data about requests that your application serves, and provides tools you can use to view, filter, and gain insights into that data to identify issues and opportunities for optimization. For any traced request to your application, you can see detailed information not only about the request and response, but also about calls that your application makes to downstream AWS resources, microservices, databases and HTTP web APIs.
@@ -28,10 +42,14 @@
 - Fully managed messaging service for both application-to-application (A2A) and application-to-person (A2P) communication.
 - The A2P functionality enables you to send messages to users at scale via SMS, mobile push, and email.
 
+
+
 ### AWS CloudTrail :
 - [AWS Reff Doc](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html)
 - AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account. With CloudTrail, you can log, continuously monitor, and retain account activity related to actions across your AWS infrastructure. CloudTrail provides event history of your AWS account activity, including actions taken through the AWS Management Console, AWS SDKs, command line tools, and other AWS services. This event history simplifies security analysis, resource change tracking, and troubleshooting. In addition, you can use CloudTrail to detect unusual activity in your AWS accounts. These capabilities help simplify operational analysis and troubleshooting.
 ![AWS CloudTrail](https://github.com/vurachaitanya/AWS/blob/master/images/AWS%20CloudTrial.JPG)
+
+
 
 ### AWS Config :
 - [AWS Reff Doc](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html)
@@ -62,13 +80,6 @@ AWSPrivateMarketplaceRequests
 AWSPrivateMarketplaceAdminFullAccess
 AWSMarketplaceFullAccess
 ```
-
-### AWS Organizations :
-- [AWS Reff](https://aws.amazon.com/organizations/)
-- [Advt of Org](https://segment.com/blog/segment-aws-organizations/)
-- AWS Organizations helps you centrally manage and govern your environment as you grow and scale your AWS resources. Using AWS Organizations, you can programmatically create new AWS accounts and allocate resources, group accounts to organize your workflows, apply policies to accounts or groups for governance, and simplify billing by using a single payment method for all of your accounts.
-- In addition, AWS Organizations is integrated with other AWS services so you can define central configurations, security mechanisms, audit requirements, and resource sharing across accounts in your organization. AWS Organizations is available to all AWS customers at no additional charge.
-
 
 
 ### AWS Marketplace : 
