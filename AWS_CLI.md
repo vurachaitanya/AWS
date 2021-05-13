@@ -30,6 +30,16 @@
  - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
  - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
 
+### Organization :
+`aws organizations list-roots` - list the root organization
+`aws organizations describe-organization` - describe organization
+`aws organizations describe-organizational-unit --organizational-unit-id` list the organization unit id details.
+`aws organizations leave-organization`  - Removes  a member account from its parent organization. This version of the operation is performed by the account that wants to leave.
+`aws organizations list-accounts` - Lists  all  the  accounts  in  the  organization.
+`aws organizations list-organizational-units-for-parent --parent-id <o-OrgID>` - List the Organization unit for the parent ID
+`aws organizations list-parents --child-id <o-OrgID>` - List the parent org info for the Chaild id given.
+
+
 
 ### AWS Commands :
 ```
