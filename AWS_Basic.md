@@ -106,4 +106,6 @@ AWSMarketplaceFullAccess
 -	License Manager also tracks the end-user identity and the underlying resource identifier, if available, associated with each check out, along with the check-out time.
 -	License Manager supports a variety of different licensing models including perpetual licenses, floating licenses, subscription licenses, and usage-based licenses. 
 -	[AWS Doc Ref](https://docs.aws.amazon.com/license-manager/latest/userguide/license-manager.html)
+-	You will need a License Manager SLR to see license entitlements
+-	Without AWS License Manager service linked roles (SLRs) you will not be able to see any of your AWS Marketplace license entitlements below. Please go to AWS License Manager Console to onboard with the AWS License Manager SLRs.
 
