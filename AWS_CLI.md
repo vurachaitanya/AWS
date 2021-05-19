@@ -29,11 +29,17 @@
 - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
 - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
 
-### Policy :
-- `aws iam list-policies` - List all policy 
+### IAM :
+- `aws iam list-policies` - List all policy name,id, ARN
+- `aws iam get-account-authorization-details` will give policy and detailed services listed associated to policy.
+- `aws iam get-policy --policy-arn arn:aws-us-gov:iam::aws:policy/AmazonRoute53FullAccess` Policy details with description and attached status.
 - `aws iam generate-service-last-accessed-details --arn arn:aws-us-gov:iam::aws:policy/AWSIoTDataAccess` list Policy last accessed details.
 - `aws iam list-policies --scope Local --only-attached --policy-usage-filter PermissionsPolicy` -- Policy details (ID, Name), ARN, Path, CreateDate date, update date etc
-
+- `aws iam list-roles` - List all Roles
+- `aws iam list-policies  --query Policies[].[Arn,PolicyName,DefaultVersionId]` List Policys with required details using JQuery
+- `aws iam list-policies-granting-service-access --service-namespaces "AWSIoTDataAccess" --arn arn:aws:iam::aws:policy/AWSIoTDataAccess  --profile personal` - Granting the services access using ARN.
+- `aws iam list-attached-role-policies --role-name AWSServiceRoleForAccessAnalyzer` Lists the roles which are attached to associated Role given.
+- `aws iam list-role-policies --role-name AWSServiceRoleForAccessAnalyzer` - list policys  **NOT working while testing
 
 ### Organization :
 - `aws organizations list-roots` - list the root organization
