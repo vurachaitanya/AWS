@@ -30,6 +30,8 @@
 - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
 
 ### IAM :
+- `aws iam list-groups --profile lab` - List groups in AWS Profile
+- `aws iam list-users --profile lab` - List users
 - `aws iam list-policies` - List all policy name,id, ARN
 - `aws iam get-account-authorization-details` will give policy and detailed services listed associated to policy.
 - `aws iam get-policy --policy-arn arn:aws-us-gov:iam::aws:policy/AmazonRoute53FullAccess` Policy details with description and attached status.
