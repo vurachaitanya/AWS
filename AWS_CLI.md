@@ -29,6 +29,9 @@
 - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
 - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
 
+### AWS Config :
+- `aws configservice describe-config-rules` AWS Config Rule Described.
+
 ### IAM :
 - `aws iam list-groups --profile lab` - List groups in AWS Profile
 - `aws iam list-users --profile lab` - List users
@@ -38,6 +41,8 @@
 - `aws iam generate-service-last-accessed-details --arn arn:aws-us-gov:iam::aws:policy/AWSIoTDataAccess` list Policy last accessed details.
 - `aws iam list-policies --scope Local --only-attached --policy-usage-filter PermissionsPolicy` -- Policy details (ID, Name), ARN, Path, CreateDate date, update date etc
 - `aws iam list-roles` - List all Roles
+- `aws iam list-roles --query Roles[].RoleName` - List Roles names only.
+- `aws iam list-role-policies --role-name codepipeline-build` - List the Role Codepipeline policy information which is attached to.
 - `aws iam list-policies  --query Policies[].[Arn,PolicyName,DefaultVersionId]` List Policys with required details using JQuery
 - `aws iam list-policies-granting-service-access --service-namespaces "AWSIoTDataAccess" --arn arn:aws:iam::aws:policy/AWSIoTDataAccess  --profile personal` - Granting the services access using ARN.
 - `aws iam list-attached-role-policies --role-name AWSServiceRoleForAccessAnalyzer` Lists the roles which are attached to associated Role given.
