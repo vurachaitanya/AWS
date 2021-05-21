@@ -6,3 +6,7 @@ AWS Basics
 
 ### What is ARN how dose it defines:
 - [Ref](https://docs.aws.amazon.com/govcloud-us/latest/UserGuide/using-govcloud-arns.html#using-govcloud-arn-syntax-ssm)
+
+### AWS Official sample information :
+- [AWS LAB Config](https://github.com/awslabs/aws-config-rules)
+- [AWS Sample](https://github.com/aws-samples)
