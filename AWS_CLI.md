@@ -60,7 +60,7 @@
 ### RDK Framework :
 - `pip install rdk` - Install RDK framework
 - `rdk init` - AWS Configure should be config to work 
-- `rdsk create ec2_desired_instance_type --runtime python3.7 --resource-types AWS::EC2::Instance --input-parameters '{"desiredInstanceType":"t2.micro"}' ` python template would be created.
+- `rdsk create ec2_desired_instance_type --runtime python3.7 --resource-types AWS::EC2::Instance --input-parameters '{"desired InstanceType":"t2.micro"}' ` python template would be created.
 - `rdk test-local ec2_desired_instance_type` - Test cases for checking compliance Test cases. 
 - `rdk modify ec2_desired_instance_type --maximum-frequency One_Hour` - modify Interval to 1 hour
 - `rdk deploy ec2_desired_instance_type` - deploy AWS Config rule for EC2 deployment to be T2Micro
