@@ -29,6 +29,13 @@
 
 
 
+### AWS Security Hub:
+-	Aggregates, Organization and prioritizes the security alerts, from multiple services. Continuously monitors and security best practices and Industry best practices. 
+-	AWS Foundational Security best practices  - AWS checks for industry best practices.
+-	AWS Security hub has security scores based on how many compliant.
+
+
+
 ### Service Control Policies (SCPs) : [AWS Reff](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
 - [Org SCP Policy](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_create.html)
 - [AWS Examples](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples.html)
