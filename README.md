@@ -10,3 +10,6 @@ AWS Basics
 ### AWS Official sample information :
 - [AWS LAB Config](https://github.com/awslabs/aws-config-rules)
 - [AWS Sample](https://github.com/aws-samples)
+
+### Useful Tools :
+- [AWS Policy Generater](https://awspolicygen.s3.amazonaws.com/policygen.html)
