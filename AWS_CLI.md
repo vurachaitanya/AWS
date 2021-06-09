@@ -24,6 +24,7 @@
 - `aws ssm get-parameters-by-path --path /aws/service/ami-amazon-linux-latest --query "Parameters[].Name"` ---list latest Amazon images path and types
 - `aws iam get-account-summary|jq .SummaryMap.Users` -- Account information and  grep summary map users list
 - `aws iam get-user --user-name test --profile personal` - List user test for the aws profile personal [AWS Reff](https://docs.aws.amazon.com/cli/latest/reference/iam/get-user.html)
+- `aws lambda create-function --function-name my-func --zip-file fileb://my-func.zip --handler lambda_function1.lambda_landler --runtime python3.8 --role arn:aws:iam::1711111111111:role/lambda-ex` -- AWS lambda create function.
 - `aws codecommit list-repositories` - ListRepositories  , which lists all AWS CodeCommit repositories asso-ciated with your AWS account.
 - `aws codecommit list-branches --repository-name <Repo name>` - ListBranches , which lists all branches for a specified repository.
 - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
