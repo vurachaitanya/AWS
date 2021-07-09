@@ -29,6 +29,7 @@
 - `aws codecommit list-branches --repository-name <Repo name>` - ListBranches , which lists all branches for a specified repository.
 - `aws codecommit list-pull-requests --repository-name <Repo name>` - ListPullRequests , which lists all pull requests for a repository
 - `aws sts get-caller-identity --profile sandbox` to check which profile it is assuming 
+- AWS Services list [List of AWS Service Principals](https://gist.github.com/shortjared/4c1e3fe52bdfa47522cfe5b41e5d6f22)
 
 ### AWS Config :
 - `aws configservice describe-config-rules` AWS Config Rule Described.
