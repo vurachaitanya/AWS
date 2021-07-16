@@ -33,6 +33,7 @@
 
 ### AWS Config :
 - `aws configservice describe-config-rules` AWS Config Rule Described.
+- `aws configservice describe-compliance-by-config-rule` AWS Config rule by compliance status
 
 ### IAM :
 - `aws iam list-groups --profile lab` - List groups in AWS Profile
