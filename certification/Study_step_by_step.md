@@ -1,4 +1,5 @@
-## AWS Solutions Architect 
+## AWS Certified Solutions Architect – Associate (SAA-C02) Exam prep
+
 
 - [X] [What is a cloud & types of Cloud](https://aws.amazon.com/what-is-cloud-computing/)
 - [ ] [Quick Labs AWS Practice Labs free](https://amazon.qwiklabs.com/catalog?locale=en)
