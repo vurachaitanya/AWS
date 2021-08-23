@@ -1,0 +1,81 @@
+<mxfile modified="2021-08-23T06:15:46.930Z" host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36" etag="8OoEbmwR0ZcBVhjGgkX0" version="14.9.8" type="github">
+  <diagram id="Ht1M8jgEwFfnCIfOTk4-" name="Page-1">
+    <mxGraphModel dx="782" dy="436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-10" value="VPC" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#248814;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;labelBackgroundColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="30" y="10" width="580" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-11" value="Public subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#248814;fillColor=#E9F3E6;verticalAlign=top;align=left;spacingLeft=30;fontColor=#248814;dashed=0;labelBackgroundColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="90" y="90" width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-14" value="Private subnet" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_security_group;grStroke=0;strokeColor=#147EBA;fillColor=#E6F2F8;verticalAlign=top;align=left;spacingLeft=30;fontColor=#147EBA;dashed=0;labelBackgroundColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="80" y="270" width="320" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-15" value="172.31.16.0/20" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="135" y="120" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-16" value="172.31.48.0/20" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="130" y="305" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-17" value="&lt;a href=&quot;https://console.amazonaws-us-gov.com/vpc/home?region=us-gov-west-1#VpcDetails:VpcId=vpc-0d06ebfd4e4ca5fab&quot; target=&quot;_top&quot; style=&quot;background-color: rgb(241 , 250 , 255) ; font-family: &amp;#34;amazon ember&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;vpc-0d06ebfd4e4ca5fab&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="90" y="30" width="175" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-18" value="subnet-0459077467d44777a" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="90" y="140" width="185" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-19" value="subnet-0d9a84f4e6b47a20f" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="90" y="325" width="190" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=none;" parent="1" source="drdZa8tH5BkG_M7NMPW4-20" target="drdZa8tH5BkG_M7NMPW4-24" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-20" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.internet_gateway;fillColor=#F58536;gradientColor=none;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="590" y="233" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-21" value="&lt;a href=&quot;https://console.amazonaws-us-gov.com/vpc/home?region=us-gov-west-1#InternetGateway:internetGatewayId=igw-0c2e8ebe4e11dddfe&quot; target=&quot;_top&quot; style=&quot;background-color: rgb(241 , 250 , 255) ; font-family: &amp;#34;amazon ember&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;igw-0c2e8ebe4e11dddfe&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="604.5" y="310" width="165.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-22" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.vpc_nat_gateway;fillColor=#F58534;gradientColor=none;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="285.5" y="148" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-23" value="&lt;a href=&quot;https://console.amazonaws-us-gov.com/vpc/home?region=us-gov-west-1#NatGatewayDetails:natGatewayId=nat-0cf2ab6b4bc9e5c79&quot; target=&quot;_top&quot; style=&quot;background-color: rgb(241 , 250 , 255) ; font-family: &amp;#34;amazon ember&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;nat-0cf2ab6b4bc9e5c79&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="220" y="220" width="180" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=none;" parent="1" source="drdZa8tH5BkG_M7NMPW4-24" target="drdZa8tH5BkG_M7NMPW4-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="drdZa8tH5BkG_M7NMPW4-23" target="drdZa8tH5BkG_M7NMPW4-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-24" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.router;fillColor=#F58534;gradientColor=none;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="440" y="238" width="69" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-30" value="&lt;a href=&quot;https://console.amazonaws-us-gov.com/vpc/home?region=us-gov-west-1#RouteTableDetails:RouteTableId=rtb-07467249768a83e27&quot; target=&quot;_top&quot; style=&quot;background-color: rgb(241 , 250 , 255) ; font-family: &amp;#34;amazon ember&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;rtb-07467249768a83e27&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="390" y="310" width="220" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-31" value="&lt;a href=&quot;https://console.amazonaws-us-gov.com/vpc/home?region=us-gov-west-1#RouteTableDetails:RouteTableId=rtb-0ee1751961cc6c511&quot; target=&quot;_top&quot; style=&quot;background-color: rgb(241 , 250 , 255) ; font-family: &amp;#34;amazon ember&amp;#34; , &amp;#34;helvetica neue&amp;#34; , &amp;#34;roboto&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif ; font-size: 14px&quot;&gt;rtb-0ee1751961cc6c511&lt;/a&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="530" y="220" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.299;entryY=0.889;entryDx=0;entryDy=0;entryPerimeter=0;fontColor=none;" parent="1" source="drdZa8tH5BkG_M7NMPW4-33" target="drdZa8tH5BkG_M7NMPW4-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-33" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.lambda_function;fillColor=#F58534;gradientColor=none;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="115.5" y="377" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-34" value="lp-cl-lambda-unused-roles-report" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="97.75" y="449" width="174.5" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-35" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.iam;fillColor=#759C3E;gradientColor=none;labelBackgroundColor=#ffffff;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="750" y="134.5" width="42" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="drdZa8tH5BkG_M7NMPW4-36" value="IAM" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontColor=none;" parent="1" vertex="1">
+          <mxGeometry x="760" y="220" width="40" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
