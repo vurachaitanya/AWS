@@ -12,6 +12,7 @@ AWS Basics
 - [AWS Sample](https://github.com/aws-samples)
 - [AWS Regions List](https://aws.amazon.com/about-aws/global-infrastructure/regions_az/)
 - [AWS Calculator](https://calculator.aws/#/)
+- [AWS Current status based on Region, AZ & services](https://status.aws.amazon.com/)
 
 ### Useful Tools :
 - [AWS Policy Generater](https://awspolicygen.s3.amazonaws.com/policygen.html)
