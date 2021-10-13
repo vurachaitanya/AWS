@@ -18,3 +18,4 @@ AWS Basics
 - [AWS Policy Generater](https://awspolicygen.s3.amazonaws.com/policygen.html)
 - [AWS Tech Talk](https://pages.awscloud.com/AWS-Online-Tech-Talks_September-2021.html?trk=em_a134p000007CHnyAAG&trkCampaign=AWS_OTT_September_2021_MultiReg&sc_channel=em&sc_campaign=%7B%7Bprogram.name%7D%7D&sc_medium=em_%7B%7Bcampaign.id%7D%7D&sc_outcome=Product_Adoption_Campaigns&sc_content=AWS_Webpage)
 - [AWS Ondemand Teck Talk](https://aws.amazon.com/events/online-tech-talks/on-demand/?ott-on-demand-all.sort-by=item.additionalFields.startDateTime&ott-on-demand-all.sort-order=desc&awsf.ott-on-demand-master-level=*all&awsf.ott-on-demand-master-category=*all&awsf.ott-on-demand-master-format=*all)
+- [Ondemand AWS lab activities](https://amazon.qwiklabs.com/catalog?locale=en)
