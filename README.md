@@ -1,4 +1,5 @@
 # AWS
+- [AWS Vs Azure services](https://docs.microsoft.com/en-us/azure/architecture/aws-professional/messaging)
 AWS Basics
 #### [AWS Training official](https://www.aws.training/Details/eLearning?id=60697)  v@g/S
 - [Terraform examples repo](https://github.com/wardviaene/terraform-course)
